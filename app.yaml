@@ -1,0 +1,31 @@
+application: eternal-poetry-477
+version: py-sandbox
+runtime: python27
+threadsafe: false
+api_version: 1
+
+handlers:
+- url: /
+  script: main.app 
+
+- url: /log_test
+  script: main.app
+
+- url: /logger
+  script: main.app
+
+- url: /log_view
+  script: main.app
+  login: admin
+
+- url: /css
+  static_dir: css
+
+- url: /static/test.xml
+  static_files: static/test.xml
+  upload: static/test.xml
+  mime_type: text/ixml
+
+- url: /google63b6f4195c67b44a.html
+  static_files: static/google63b6f4195c67b44a.html
+  upload: static/google63b6f4195c67b44a.html
